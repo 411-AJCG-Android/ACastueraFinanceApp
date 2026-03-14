@@ -23,6 +23,7 @@ import com.example.financeapp.ui.theme.CarneClaro
 import com.example.financeapp.ui.theme.FinanceAppTheme
 import com.example.financeapp.ui.theme.LightGreenish
 import com.example.financeapp.ui.theme.LightPurple
+import com.example.financeapp.ui.theme.MintGreen
 
 @Composable
 fun HomeScreen(
