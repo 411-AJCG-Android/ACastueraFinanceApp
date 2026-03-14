@@ -11,3 +11,16 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val CarneClaro = Color(0xFFF1E4D9)
+
+val MintGreen = Color(0xFFAAF0D1)
+
+val SoftBeige = Color(0xFFF1E4D9)
+
+val LavenderBlue = Color(0xFFC7CEEA)
+
+val DarkText = Color(0xFF333333)
+
+val GrayText = Color(0xFF888888)
+
+val LightGreenish = Color(0xFFE6F2ED)
+val LightPurple = Color(0xFFE5E0F6)

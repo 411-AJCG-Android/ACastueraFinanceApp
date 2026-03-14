@@ -10,8 +10,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.financeapp.components.Cards
 import com.example.financeapp.components.Header
+import com.example.financeapp.models.SummaryCard
+import com.example.financeapp.ui.theme.CarneClaro
 import com.example.financeapp.ui.theme.FinanceAppTheme
+import com.example.financeapp.ui.theme.LightGreenish
+import com.example.financeapp.ui.theme.LightPurple
 
 
 @Composable
@@ -19,17 +24,26 @@ fun HomeScreen(
     innerPadding: PaddingValues
 ) {
     val colors = MaterialTheme.colorScheme
-
+    val cards = listOf(
+        SummaryCard("Actividad", 0.0, LightGreenish),
+        SummaryCard("Ventas", 280.99, CarneClaro),
+        SummaryCard("Ganancias", 280.99, LightPurple)
+    )
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            //.background(colors.tertiaryContainer)
             .padding(innerPadding)
     ) {
         Header(innerPadding)
+
+        Cards(
+            card = cards,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp, start = 20.dp, end = 20.dp)
+        )
     }
 }
-
 
 @Preview(
     showBackground = true,
