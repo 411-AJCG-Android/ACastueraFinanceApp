@@ -56,7 +56,7 @@ fun Header(user: User) {
                     color = colors.onSurface
                 )
                 Text(
-                    text = "Bienvenido",
+                    text = "Bienvenida",
                     style = typography.bodyLarge,
                     color = GrayText
                 )
