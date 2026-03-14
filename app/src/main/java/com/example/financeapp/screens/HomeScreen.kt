@@ -12,12 +12,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.financeapp.components.Cards
 import com.example.financeapp.components.Header
+import com.example.financeapp.components.TransactionsLists
 import com.example.financeapp.models.SummaryCard
+import com.example.financeapp.models.transaccionList
+import com.example.financeapp.ui.theme.AzulBlanco
+import com.example.financeapp.ui.theme.AzulBlancoGris
 import com.example.financeapp.ui.theme.CarneClaro
 import com.example.financeapp.ui.theme.FinanceAppTheme
 import com.example.financeapp.ui.theme.LightGreenish
 import com.example.financeapp.ui.theme.LightPurple
-
 
 @Composable
 fun HomeScreen(
@@ -32,6 +35,7 @@ fun HomeScreen(
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .background(AzulBlancoGris)
             .padding(innerPadding)
     ) {
         Header(innerPadding)
@@ -42,6 +46,10 @@ fun HomeScreen(
                 .fillMaxWidth()
                 .padding(top = 16.dp, start = 20.dp, end = 20.dp)
         )
+
+        Column(modifier = Modifier.weight(1f)){
+            TransactionsLists(transacciones = transaccionList)
+        }
     }
 }
 

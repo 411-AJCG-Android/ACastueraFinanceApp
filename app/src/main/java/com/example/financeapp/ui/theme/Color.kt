@@ -24,3 +24,9 @@ val GrayText = Color(0xFF888888)
 
 val LightGreenish = Color(0xFFE6F2ED)
 val LightPurple = Color(0xFFE5E0F6)
+
+val AzulBlanco = Color(0xFFFAFAFF)
+
+//val AzulBlancoFuerte = Color(0xFFF0F0FF)
+
+val AzulBlancoGris = Color(0xFFF5F5FA)
