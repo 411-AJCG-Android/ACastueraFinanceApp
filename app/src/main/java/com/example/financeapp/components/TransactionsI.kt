@@ -30,13 +30,16 @@ import com.example.financeapp.ui.theme.GrayText
 
 @Composable
 fun TransactionI(transaction: Transaction) {
+    val colors = MaterialTheme.colorScheme
+    val typography = MaterialTheme.typography
+
     Column (
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(16.dp)) // curvatura de la fila
-            .background(Color.White)          // fondo visible
-            .padding(horizontal = 16.dp, vertical = 12.dp) // padding interno
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color.White)
+            .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -72,13 +75,12 @@ fun TransactionI(transaction: Transaction) {
             }
             Column(horizontalAlignment = Alignment.End) {
                 Text(
-                    text = "$${transaction.monto}",
-                    fontWeight = FontWeight.Bold
+                    text = "$${transaction.monto}"
                 )
                 Text(
                     text = transaction.hora,
-                    color = GrayText,
-                    fontSize = 12.sp
+                    color = colors.onBackground,
+                    fontSize = 11.sp
                 )
             }
         }
