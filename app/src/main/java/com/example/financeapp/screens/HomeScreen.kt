@@ -14,7 +14,9 @@ import com.example.financeapp.components.Cards
 import com.example.financeapp.components.Header
 import com.example.financeapp.components.TransactionsLists
 import com.example.financeapp.models.SummaryCard
+import com.example.financeapp.models.User
 import com.example.financeapp.models.transaccionList
+import com.example.financeapp.models.user
 import com.example.financeapp.ui.theme.AzulBlanco
 import com.example.financeapp.ui.theme.AzulBlancoGris
 import com.example.financeapp.ui.theme.CarneClaro
@@ -38,7 +40,7 @@ fun HomeScreen(
             .background(AzulBlancoGris)
             .padding(innerPadding)
     ) {
-        Header(innerPadding)
+        Header(user)
 
         Cards(
             card = cards,

@@ -13,20 +13,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.financeapp.models.user
+import com.example.financeapp.models.User
 import com.example.financeapp.ui.theme.CarneClaro
-
+import com.example.financeapp.ui.theme.GrayText
 
 @Composable
-fun Header(innerPadding: PaddingValues) {
+fun Header(user: User) {
     val colors = MaterialTheme.colorScheme
     val typography = MaterialTheme.typography
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(innerPadding)
-            .padding(top = 34.dp, start = 16.dp)
+            .padding(top = 20.dp, start = 16.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -53,13 +52,13 @@ fun Header(innerPadding: PaddingValues) {
             ) {
                 Text(
                     text = "Hola ${user.nombre}",
-                    style = typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                    style = typography.titleLarge.copy(fontWeight = FontWeight.Bold, fontSize = typography.titleLarge.fontSize * 1.1f),
                     color = colors.onSurface
                 )
                 Text(
                     text = "Bienvenido",
-                    style = typography.bodyMedium,
-                    color = colors.onSurfaceVariant
+                    style = typography.bodyLarge,
+                    color = GrayText
                 )
             }
             IconButton(onClick = { }) {
